@@ -21,6 +21,24 @@ Properties are available to enter a Change ticket number, change type (Normal or
 2. Stakeholder approvers
 3. CAB approvers
 
+A check box also exists to detail if approvals are automated or not.
+
+Once the original 'Request for Change' form has been submitted the process checks to see if
+1. this is a normal change
+2. we are set to automatically manage approvals
+3. the change is in an approval status
+
+If the above conditions are true the system will identify the selected approval groups for the respective status and send a notification requesting approval.
+Recipients of the approval notification can 'Approve' or 'decline' the request.  Each response option allows for comments to be added after the response has been sent.
+If the response is positive, i.e. approved, the system checks to see if there are any subsequent approval stages defined and forwards a new notification to that set of defined approver group(s).
+The system continues this automated process until such time as there are no subsequent approval stages or until we receive a 'Decline' response.
+
+All comments submitted from each approval event are written back to the original 'Request for Change' event so the change manager can quickly see responses from each approval stage.
+
+Once all approval stages are complete the change manager can manually duplicate the original 'Request for Change' event and progress the change through the remaining status.
+
+If the original 'Request for Change' event is not configured for auto-approval the change manager can progress the change through each necessary status via manually duplicating the event a selecting the relevant status.
+
 # Installation
 Details of the installation go here.
 
