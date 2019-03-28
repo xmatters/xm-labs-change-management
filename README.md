@@ -69,17 +69,21 @@ Several constants are used to enable this process
 
 This is used to identify the inbound integration URL for the Approval History form.
 Paste the URL copied from 'Inbound - Approval History' integration.
+
 <kbd>
   <img src="media/history_url.png" width="400" height="400">
 </kbd>
+
 
 2. **approver form api**
 
 This is used to identify the inbound integration URL for the Approval form sent to respective approvers.
 Paste the URL copied from 'Inbound - Change Approval' integration.
+
 <kbd>
   <img src="media/approval_url.png" width="400" height="400">
 </kbd>
+
 
 3. **Approval Status and Groups**
 
@@ -97,6 +101,7 @@ or
 <kbd>
   <img src="media/status_and_group2.png" width="400" height="400">
 </kbd>
+
 
 4. **Group Property UUIDs**
 
@@ -118,39 +123,17 @@ You can comma-delimit as many approver properties as required for your process.
   <img src="media/group_property_uuid.png" width="400" height="400">
 </kbd>
 
+To populate your group properties simply initiate an empty 'Request for Change' form.  When this event is processed it will update each of the defined list properties with your group names.
+
+Each time the form runs the group properties list is refreshed
+
 NB: You can manually populate these approver properties if you wish.  If you do manually populate them you must ensure to type the group name *exactly* as it appears on the group.
 
 If this constant is empty the process does not try to populate these properties.
 
 
+# Lets take a look...
 
-
-
-
-
-
-
-
-   ```
-   var items = [];
-   items.push( { "stuff": "value"} );
-   console.log( 'Do stuff' );
-   ```
-
-
-## Application ABC set up
-Any specific steps for setting up the target application? The more precise you can be, the better!
-
-Images are encouraged. Adding them is as easy as:
-```
-<kbd>
-  <img src="media/cat-tax.png" width="200" height="400">
-</kbd>
-```
-
-<kbd>
-  <img src="media/cat-tax.png" width="200" height="400">
-</kbd>
 
 
 # Testing
