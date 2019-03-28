@@ -134,10 +134,75 @@ If this constant is empty the process does not try to populate these properties.
 
 # Lets take a look...
 
+1. initiate the form:
+
+<kbd>
+  <img src="media/rfc1.png" width="400" height="400">
+</kbd>
+<kbd>
+  <img src="media/rfc2.png" width="400" height="400">
+</kbd>
+<kbd>
+  <img src="media/rfc3.png" width="400" height="400">
+</kbd>
+
+2. Change manager monitors the event:
+<kbd>
+  <img src="media/rfc4.png" width="400" height="400">
+</kbd>
+
+3. approval events are created for each defined approval stage:
+
+<kbd>
+  <img src="media/rfc5.png" width="400" height="400">
+</kbd>
+
+targeted approvers can Approve or Reject and then add comments:
+
+<kbd>
+  <img src="media/rfc6.png" width="400" height="400">
+</kbd>
+
+<kbd>
+  <img src="media/rfc7.png" width="400" height="400">
+</kbd>
+
+4. comments and next actions are recorded in the original event:
+
+<kbd>
+  <img src="media/rfc8.png" width="400" height="400">
+</kbd>
+
+5. the next approval event is created:
+
+<kbd>
+  <img src="media/rfc9.png" width="400" height="400">
+</kbd>
+
+This repeats until all approvals have been completed or until any approval is rejected.
+
+6. Approvers have a response option to get approval history.  This returns a list of all comments published to the original event:
+
+<kbd>
+  <img src="media/rfc10.png" width="400" height="400">
+</kbd>
+
+7. The system recognises and reports that all approval stages are complete allowing the change manager to progress the next stages manually:
+
+<kbd>
+  <img src="media/rfc11.png" width="400" height="400">
+</kbd>
 
 
 # Testing
-Be specific. What should happen to make sure this code works? What would a user expect to see?
+Once configured as above initiate a new 'Request for Change' ensuring to select the 'Auto Approve' check box.
+
+The above process should unfold.
+
+Be sure to check the comments of the 'Request for Change' event as several comments can be written, for example if we have defined an approval stage but have not defined any approvers for the stage then the comments will let you know.
+
 
 # Troubleshooting
-Optional section for how to troubleshoot. Especially anything in the source application that an xMatters developer might not know about, or specific areas in xMatters to look for details - like the Activity Stream?
+Any  deviations from the above described process will need to be investigated in the activity stream.  Most likely in the Outbound response activity stream but bear in mind there are 2 inbound and 3 outbound integrations used to manage this process.
+
+Its always worth double checking the constants are configured exactly as required as any variance of UUIDs or status names/list property names will stop the process.  Indeed the URL constants must be correct and identify their respective inbound integrations.
