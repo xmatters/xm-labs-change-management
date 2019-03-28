@@ -30,7 +30,7 @@ Once the original 'Request for Change' form has been submitted the process check
 
 If the above conditions are true the system will identify the selected approval groups for the respective status and send a notification requesting approval.
 
-Recipients of the approval notification can 'Approve' or 'Decline' the request.  Each response option allows for comments to be added after the response has been sent.
+Recipients of the approval notification can **Approve** or **Decline** the request.  Each response option allows for comments to be added after the response has been sent.
 
 If the response is positive, i.e. approved, the system checks to see if there are any subsequent approval stages defined and forwards a new notification to that set of defined approver group(s).
 
@@ -48,17 +48,17 @@ Import the above communication plan (link: http://help.xmatters.com/OnDemand/xmo
 ## xMatters set up
 Once the communication plan has been imported:
 ### Configure Forms
-1. Configure 'Sender Permissions' on the 'Request for Change' form to allow respective 'Change Managers' to initiate the process
+1. Configure *Sender Permissions* on the 'Request for Change' form to allow respective 'Change Managers' to initiate the process
 2. Ensure 'Request for Change' form is enabled for WEB access (and possibly Mobile if so desired)
 3. Ensure 'Approval History' and 'Change Approval' forms are enabled for 'Web Service' access
 
 ### Configure Inbound Integrations
-1. Open each Inbound Integration and ensure they are configured for 'URL Authentication'
+1. Open each Inbound Integration and ensure they are configured for *URL Authentication*
 <kbd>
   <img src="media/url_auth.png" width="800" height="200">
 </kbd>
 
-2. Copy the Integration URL for the 'Inbound - Approval History' and 'Inbound - Change Approval' inbound integrations as we will need these details when configuring Constants
+2. Copy the Integration URL for the **Inbound - Approval History** and **Inbound - Change Approval** inbound integrations as we will need these details when configuring Constants
 <kbd>
   <img src="media/integration_url.png" width="800" height="200">
 </kbd>
@@ -66,6 +66,7 @@ Once the communication plan has been imported:
 ### Configure Constants
 Several constants are used to enable this process
 1. **approval history form api**
+
 This is used to identify the inbound integration URL for the Approval History form.
 Paste the URL copied from 'Inbound - Approval History' integration.
 <kbd>
@@ -73,6 +74,7 @@ Paste the URL copied from 'Inbound - Approval History' integration.
 </kbd>
 
 2. **approver form api**
+
 This is used to identify the inbound integration URL for the Approval form sent to respective approvers.
 Paste the URL copied from 'Inbound - Change Approval' integration.
 <kbd>
@@ -80,7 +82,10 @@ Paste the URL copied from 'Inbound - Change Approval' integration.
 </kbd>
 
 3. **Approval Status and Groups**
-This constant is used to allow you to map *your* approval status to the form property storing respective approvers for that status.  For example, your first approval status may not be 'Manager Approval' but might be 'Pre-Approval'.  In this case you can modify the 'Status' list property to enter your approval status supporting *your process terminology*.  For consistency you may want to create a new 'Pre-Approval' approver list property to identify the approvers for this status.
+
+This constant is used to allow you to map *your* approval status to the form property storing respective approvers for that status.  
+
+For example, your first approval status may not be 'Manager Approval' but might be 'Pre-Approval'.  In this case you can modify the 'Status' list property to enter your approval status supporting *your process terminology*.  For consistency you may want to create a new 'Pre-Approval' approver list property to identify the approvers for this status.
 
 The 'Approval Status and Groups' constant allows you to map your status to your approval property. i.e.
 <kbd>
@@ -94,16 +99,18 @@ or
 </kbd>
 
 4. **Group Property UUIDs**
+
 This constant is used to auto-populate your approver list properties with your groups.  
 If you want to copy all your groups into your approver properties you can access the unique identifier for your approver properties and enter them in this constant.
 To access the unique identifier go to the 'Properties' section and edit your respective property:
 <kbd>
-  <img src="media/list_property.png" width="400" height="400">
+  <img src="media/list_property.png" width="800" height="400">
 </kbd>
 
 Then select the 'API' button and copy the UUID into the constant.
+
 <kbd>
-  <img src="media/list_property_uuid.png" width="200" height="400">
+  <img src="media/list_property_uuid.png" width="400" height="200">
 </kbd>
 
 You can comma-delimit as many approver properties as required for your process.
@@ -111,7 +118,9 @@ You can comma-delimit as many approver properties as required for your process.
   <img src="media/group_property_uuid.png" width="400" height="400">
 </kbd>
 
-NB: You can manually populate these approver properties if you wish.  If you do manually populate the
+NB: You can manually populate these approver properties if you wish.  If you do manually populate them you must ensure to type the group name *exactly* as it appears on the group.
+
+If this constant is empty the process does not try to populate these properties.
 
 
 
