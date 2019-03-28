@@ -148,13 +148,13 @@ If this constant is empty the process does not try to populate these properties.
 
 2. Change manager monitors the event:
 <kbd>
-  <img src="media/rfc4.png" width="400" height="400">
+  <img src="media/rfc4.png" width="600" height="400">
 </kbd>
 
 3. approval events are created for each defined approval stage:
 
 <kbd>
-  <img src="media/rfc5.png" width="400" height="400">
+  <img src="media/rfc5.png" width="400" height="200">
 </kbd>
 
 targeted approvers can Approve or Reject and then add comments:
@@ -170,13 +170,13 @@ targeted approvers can Approve or Reject and then add comments:
 4. comments and next actions are recorded in the original event:
 
 <kbd>
-  <img src="media/rfc8.png" width="400" height="400">
+  <img src="media/rfc8.png" width="600" height="400">
 </kbd>
 
 5. the next approval event is created:
 
 <kbd>
-  <img src="media/rfc9.png" width="400" height="400">
+  <img src="media/rfc9.png" width="400" height="200">
 </kbd>
 
 This repeats until all approvals have been completed or until any approval is rejected.
@@ -184,13 +184,13 @@ This repeats until all approvals have been completed or until any approval is re
 6. Approvers have a response option to get approval history.  This returns a list of all comments published to the original event:
 
 <kbd>
-  <img src="media/rfc10.png" width="400" height="400">
+  <img src="media/rfc10.png" width="800" height="400">
 </kbd>
 
 7. The system recognises and reports that all approval stages are complete allowing the change manager to progress the next stages manually:
 
 <kbd>
-  <img src="media/rfc11.png" width="400" height="400">
+  <img src="media/rfc11.png" width="600" height="400">
 </kbd>
 
 
