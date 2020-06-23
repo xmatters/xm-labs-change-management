@@ -4,15 +4,21 @@ Manual approvals process is also supported.
 This has been created as a stand-alone feature driven by xMatters but also allows for integration with a third party management system.
 
 
+--------
+
 <kbd>
-  <img src="https://github.com/xmatters/xMatters-Labs/raw/master/media/disclaimer.png">
+<a href="https://support.xmatters.com/hc/en-us/community/topics">
+   <img src="https://github.com/xmatters/xMatters-Labs/raw/master/media/disclaimer.png">
+</a>
 </kbd>
+
+--------
 
 # Pre-Requisites
 * xMatters account - If you don't have one, [get one](https://www.xmatters.com)!
 
 # Files
-* [ChangeManagement.zip](ChangeManagement.zip) - This is the Change Management communication plan.  All functionality is delivered with this one file.
+* [ChangeManagement.zip](ChangeManagement.zip) - This is the Change Management workflow.  All functionality is delivered with this one file.
 
 # How it works
 A Change Manager initiates the 'Request for Change' form entering pertinent details describing the change.  
@@ -43,10 +49,10 @@ Once all approval stages are complete the change manager can manually duplicate 
 If the original 'Request for Change' event is not configured for auto-approval the change manager can progress the change through each necessary status via manually duplicating the event a selecting the relevant status.
 
 # Installation
-Import the above communication plan (link: http://help.xmatters.com/OnDemand/xmodwelcome/communicationplanbuilder/exportcommplan.htm)
+Import the above workflow (link: http://help.xmatters.com/OnDemand/xmodwelcome/communicationplanbuilder/exportcommplan.htm)
 
 ## xMatters set up
-Once the communication plan has been imported:
+Once the workflow has been imported:
 ### Configure Forms
 1. Configure *Sender Permissions* on the 'Request for Change' form to allow respective 'Change Managers' to initiate the process
 2. Ensure 'Request for Change' form is enabled for WEB access (and possibly Mobile if so desired)
